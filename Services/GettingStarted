@@ -1,0 +1,107 @@
+## **Getting Started** ##
+### **Prerequisites** ###
+<p>
+  You need to create a GIT Repository (Public access) with the following files <strong>
+    <a href="https://confluence.walmart.com/display/PRT/3%29+How+to+create+.perf+file">.perf</a> or .jmx (Jmeter Test Plan) and .csv</strong> data files if any</p>
+<p>Alternately, you could also drop your existing .jmx files <span style="color: rgb(0,0,0);">(Jmeter Test Plan)</span> directly and run the performance test as well without creating .perf file.</p>
+### **Step-by-Step Guide** ###
+<p>
+<ol>
+  <li>
+    <p>Go to webpage, <a href="http://hyper.walmart.com/">http://hyper.walmart.com/</a>
+    </p>
+  </li>
+  <li>
+    <p>Create Project</p>
+    <ol type="a">
+      <li>Create GIT Repo first (sample - <a class="external-link" href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf" rel="nofollow">Hyper_Demo</a>)</li>
+      <li>Create <strong>.perf file </strong>(sample - <a class="external-link" href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf" rel="nofollow">Hyper_Demo</a>
+        <span class="repo-root js-repo-root" style="color: rgb(118,118,118);">
+          <span> ) <span style="color: rgb(0,0,0);">
+              <strong>or dropping the existing .jmx file</strong> (Jmeter Test Plan)</span>
+          </span>
+        </span>
+      </li>
+      <li>Project Name - <strong>Don't use '-' in the project name instead use '_'</strong>
+      </li>
+      <li>GIT Location - eg:  (don’t provide “SSH” git link. <strong>Also GIT Repo needs to be Public</strong>) </li>
+      <li>Email ID – For sending the performance report (Use comma separated to provide multiple email ids)</li>
+      <li>Hit <strong>“Create Project”</strong>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Executing Performance Test</p>
+    <ol type="a">
+      <li>
+        Select your Project
+      </li>
+      <li>
+        GIT Location - eg:  (don’t provide “SSH” git link. <strong>Also GIT Repo needs to be Public</strong>)
+      </li>
+      <li>
+        Email ID – For sending the performance report (Use comma separated to provide multiple email ids)
+      </li>
+      <li>
+        Hit <strong>“Execute”</strong>
+      </li>
+      <li>
+        <p>After test is done you will get the report via SLACK and also on Email</p>
+      </li>
+    </ol>
+  </li>
+  <li>Test Queue <ol type="a">
+      <li>Will show the performance tests lined up or waiting for execution</li>
+    </ol>
+  </li>
+  <li>Test Running<ol type="a">
+      <li>Will show the performance tests that are currently executing</li>
+    </ol>
+  </li>
+  <li>Performance Trend Graphs<ol type="a">
+      <li>
+        <strong>Throughput</strong> - shows the throughput graph, between tests</li>
+      <li>
+        <strong>Response Time</strong>  - shows Avg, Median and 90th percentile of the selected project, between test executions</li>
+      <li>
+        <strong>Percentage of Errors</strong> - shows the error percentage, for each test execution</li>
+    </ol>
+  </li>
+</ol>
+<p> </p>
+<p>Monitoring RealTime Using Medusa:</p>
+<h2>
+  <ac:image>
+    <ri:attachment ri:filename="image2017-5-4 21:56:2.png"/>
+  </ac:image>
+</h2>
+<h2>Related articles</h2>
+<p>
+  <ac:placeholder>Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.</ac:placeholder>
+</p>
+<p>
+  <ac:structured-macro ac:macro-id="b0b45b1d-8f7f-4d30-8844-34fdd0d14530" ac:name="contentbylabel" ac:schema-version="2">
+    <ac:parameter ac:name="showLabels">false</ac:parameter>
+    <ac:parameter ac:name="max">5</ac:parameter>
+    <ac:parameter ac:name="spaces">PRT</ac:parameter>
+    <ac:parameter ac:name="showSpace">false</ac:parameter>
+    <ac:parameter ac:name="sort">modified</ac:parameter>
+    <ac:parameter ac:name="reverse">true</ac:parameter>
+    <ac:parameter ac:name="type">page</ac:parameter>
+    <ac:parameter ac:name="cql">label = "how-to-perf-file" and type = "page" and space = "PRT"</ac:parameter>
+    <ac:parameter ac:name="labels">kb-how-to-article</ac:parameter>
+  </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="2dc0505c-8bd3-4e64-9b42-b025ae5a6ad9" ac:name="details" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">true</ac:parameter>
+  <ac:rich-text-body>
+    <table>
+      <tbody>
+        <tr>
+          <th>Related issues</th>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+  </ac:rich-text-body>
+</ac:structured-macro>
