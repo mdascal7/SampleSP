@@ -27,31 +27,18 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
 
 **Scheduled and On Demand - (Includes CI/CD/CP use cases)**
 
- - E2E Testing
- - Production Testing
- - MultiMarket Testing 
- - Failover Testing 
- - Endurance/Soak Testing 
-	 - Applicable for CI/CD and E2E
+ - E2E Testing (lower environments)
  - Scalability Testing
  - Throughput Testing
- - Queues Testing
- - Query Testing
  - Benchmarking Testing
 	 - Hardware
 	 - Software
  - Spike Testing
- - Replay Production Logs
-	 - Application
-	 - DB
-
- - Support for AB Testing 
 
 **Reports**
 
- - Test summary report     (Target group  dev/test)
- - Executive summary       (Leadership)
- - Analysis + Recommendations (Owners of systems)
+ - Test summary report
+ - Live Performance Test Monitoring using Medusa
  - Continuous Performance (Pipeline)
 ### **Architecture** ###
 ![HyperCurrentArchitecturePage1JPEG](https://confluence.walmart.com/download/attachments/209950455/Hyper_Current_Architecture%20-%20Page%201.jpeg?api=v2)
@@ -206,27 +193,7 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
   <li>MVP: Audit Trail<br/>
   </li>
 </ul>
-<h4><strong>Miscellaneous Backlog</strong></h4>
-<h4><strong>Client Performance</strong></h4>
-<ul>
-  <li>Self service for device based tests : 1. mWeb page performance 2. Mobile App perform</li>
-  <li>Page analysis on desktop site across IE, Firefox, Chome along with recommendations</li>
-</ul>
-<h4><strong>Profiling and Logistics</strong></h4>
-<ul>
-  <li>Capture and analyze Thread Dumps, Heap dumps</li>
-  <li>Code Profiling on demand<br/>
-  </li>
-</ul>
-<p>
-  <strong>Modeling </strong>
-</p>
-<ul>
-  <li>Modelling based on production log analysis</li>
-  <li>Modelling based on RUM Data<br/>
-  </li>
-</ul>
-### **Feature Roadmap** ###
+
 ### **Customers**###
 
  - CAGM
@@ -235,4 +202,4 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
  - Sam's Club
  - USGM
  - Walmart Core
-**And Many More!**
+**(Over 150 Projects Ported!)**
