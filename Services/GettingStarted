@@ -4,7 +4,9 @@
   You need to create a GIT Repository (Public access) with the following files <strong>
     <a href="https://confluence.walmart.com/display/PRT/3%29+How+to+create+.perf+file">.perf</a> or .jmx (Jmeter Test Plan) and .csv</strong> data files if any</p>
 <p>Alternately, you could also drop your existing .jmx files <span style="color: rgb(0,0,0);">(Jmeter Test Plan)</span> directly and run the performance test as well without creating .perf file.</p>
+
 ### **Step-by-Step Guide** ###
+
 <p>
 <ol>
   <li>
@@ -30,6 +32,12 @@
       </li>
     </ol>
   </li>
+  <img src="https://confluence.walmart.com/download/attachments/209950455/hyper_image2017-5-4%2021_56_2.png?api=v2">
+  <br></br>
+  <br></br>
+  <img src="https://confluence.walmart.com/download/attachments/209950455/hyper_image2017-3-14%2013_6_40.png?api=v2">
+  <br></br>
+  <br></br>
   <li>
     <p>Executing Performance Test</p>
     <ol type="a">
@@ -67,41 +75,406 @@
         <strong>Percentage of Errors</strong> - shows the error percentage, for each test execution</li>
     </ol>
   </li>
-</ol>
+  <li>Monitoring<ol type="a">
+      <li>Set up RealTime Monitoring using <strong>Medusa</strong></li>
+    </ol>
+  </li>
+</p>
+### **How-to's** ###
+#### **Creating a .perf File** ####
+
+<p>You need to follow the<strong> specific order and syntax while creating</strong>
+</p>
+<p>
+  <strong>
+    <strong>Between the Field and Value </strong>
+  </strong>
+  <strong>tab is the separator after the “:”</strong>
+</p>
 <p> </p>
-<p>Monitoring RealTime Using Medusa:</p>
-<h2>
-  <ac:image>
-    <ri:attachment ri:filename="image2017-5-4 21:56:2.png"/>
-  </ac:image>
-</h2>
-<h2>Related articles</h2>
 <p>
-  <ac:placeholder>Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.</ac:placeholder>
+  <span style="color: rgb(0,0,255);">
+    <strong>Project Name:</strong>(Followed by tab)</span> ProjectName. <strong>Git Repository Name and Project Name needs to be same. Avoid space use someother symbols instead in project name.</strong>
 </p>
 <p>
-  <ac:structured-macro ac:macro-id="b0b45b1d-8f7f-4d30-8844-34fdd0d14530" ac:name="contentbylabel" ac:schema-version="2">
-    <ac:parameter ac:name="showLabels">false</ac:parameter>
-    <ac:parameter ac:name="max">5</ac:parameter>
-    <ac:parameter ac:name="spaces">PRT</ac:parameter>
-    <ac:parameter ac:name="showSpace">false</ac:parameter>
-    <ac:parameter ac:name="sort">modified</ac:parameter>
-    <ac:parameter ac:name="reverse">true</ac:parameter>
-    <ac:parameter ac:name="type">page</ac:parameter>
-    <ac:parameter ac:name="cql">label = "how-to-perf-file" and type = "page" and space = "PRT"</ac:parameter>
-    <ac:parameter ac:name="labels">kb-how-to-article</ac:parameter>
-  </ac:structured-macro>
+  <span style="color: rgb(0,0,255);">
+    <strong>Method:</strong>
+  </span>  <strong>GET or POST</strong> (Two Methods only allowed)</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>TotalVUs:    </strong>
+  </span>Total Number of users you like to execute in parallel for this use case (At least 2 users min). <strong>Max 50 VUs</strong> <strong>If you provide any value above 50 VUs we will make it to default 50 VUs.</strong>
 </p>
-<ac:structured-macro ac:macro-id="2dc0505c-8bd3-4e64-9b42-b025ae5a6ad9" ac:name="details" ac:schema-version="1">
-  <ac:parameter ac:name="hidden">true</ac:parameter>
-  <ac:rich-text-body>
-    <table>
-      <tbody>
-        <tr>
-          <th>Related issues</th>
-          <td> </td>
-        </tr>
-      </tbody>
-    </table>
-  </ac:rich-text-body>
-</ac:structured-macro>
+<p>
+  <strong>
+    <span style="color: rgb(0,0,255);">StartVUs:</span>
+  </strong> <strong>    </strong>How many users you want to Start with and continue the same ramp up model till you reach TotalVUs. <strong>Max 50 VUs</strong> <strong>If you provide any value above 50 VUs we will make it to default 50 VUs.</strong>
+</p>
+<p>
+  <strong>
+    <span style="color: rgb(0,0,255);">Hold Rampup:</span>
+  </strong> <strong>    </strong>How long you want to hold with the Started Users <strong>(mins)</strong>. <strong>You can run the test for Max of 1 Hour. If you provide any value above 1 Hr we will make it to default 1 Hr.</strong>
+</p>
+<p>
+  <strong>
+    <span style="color: rgb(0,0,255);">Duration:</span>
+  </strong> <strong>    </strong>After Ramping up all the Total users how long you want to hold <strong>(mins)</strong>. <strong>You can run the test for Max of 1 Hour. If you provide any value above 1 Hr we will make it to default 1 Hr.</strong>
+</p>
+<p>
+  <strong>
+    <span style="color: rgb(0,0,255);">Ramp up:</span>
+  </strong> <strong>    </strong>Time to Ramp up the mentioned StartVUs for each ramp (secs)</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>API Name:</strong>
+  </span>     Name of the API</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Data files:</strong>
+  </span>   <strong>(Optional)</strong> If you have any data files it needs to be in <strong>csv format with only one column</strong>. You can provide multiple data files with comma as separator. For using the data file anywhere as part of the Request/Headers just replace the value with <strong>{name of the csv file}</strong>
+</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>URL:</strong>
+  </span> <strong>End point to hit</strong> <strong>without http:// or https://</strong>
+</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Body:</strong>
+  </span>    Its applicable only for <strong>POST Method</strong>
+  <strong>. </strong>Parameters you like to pass it needs to be in <strong>Raw Source format in single line.</strong>
+</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Protocol:</strong>
+  </span>     <strong>HTTPS or HTTP</strong> (<strong>Optional if you wont provide it will consider as HTTP protocol by default</strong>)</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Port:</strong>
+  </span>     <strong>You can specify your own port numbers</strong> (<strong>Optional if you wont provide it will consider as 80 port by default</strong>)</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Headers:</strong>
+  </span> <strong>HeaderName:Value</strong>
+  <strong> (Optional. If you like to provide multiple headers use tab as separator all the headers value needs to be in single line)</strong>
+</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Parse:  <span style="color: rgb(0,0,0);">VariableName:'regex pattern':matchcount </span>
+    </strong>
+    <span style="color: rgb(0,0,0);">(eg: </span>
+    <span style="color: rgb(0,0,0);">Parse:  links:'href="(.+?)"':2 - Link variable will have the value of the second link from the response. if you mention matchcount as -1 it will store all the values in an array)</span>
+  </span>
+</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Wait:</strong>
+  </span>     <strong>You can specify wait time in ms between requests </strong>(<strong>Optional</strong>)</p>
+<p>
+  <span style="color: rgb(0,0,255);">
+    <strong>Last line need to end with blank Line</strong>
+  </span>
+</p>
+<p> </p>
+<p>You can also have multiple requests in the same project. While executing the performance test all will execute in parallel with the defined workload pattern.</p>
+<p>You can also create a Flow/Sequence/Transaction by without leaving any blank line - <span class="repo-root js-repo-root" style="color: rgb(118,118,118);">
+    <span class="js-path-segment">
+      <a href="https://gecgithub01.walmart.com/pkumaar/GOP_AccountClient_AddAddress/blob/master/.perf">
+        <span>GOP_AccountClient_AddAddress</span>
+      </a>
+    </span>
+  </span>
+</p>
+<p>GIT sample of .perf file - <a href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf">Hyper_Demo</a>
+</p>
+<p>
+  <a href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf">Hyper Uses Multi Step Ramp up Model - Sample </a>
+</p>
+<p>
+  <img src="https://confluence.walmart.com/download/attachments/186306756/image2017-10-11%2012%3A19%3A22.png?version=1&modificationDate=1507749562000&api=v2"</>
+</p>
+
+#### **Examples** ####
+
+##### **Project with 1 Request** #####
+
+    Project Name:	Perf_Auto_Test
+    Method:	GET
+    TotalVUs:	20
+    StartVUs:	4
+    Hold Rampup:	10
+    Duration:	10
+    Ramp up:	1
+    API Name:	test1
+    Data files:	zipcode.csv,skuid.csv
+    URL:	grocery-api.stage.grocery-api.prod.walmart.com/v2/api/serviceAvailabilitypostalCode=${zipcode}&fulfillmentType=ALL&&&radius=35&testStores=true&
+    Protocol:	HTTPS
+<p/>
+
+##### **Project with 2 Requests. Also contains post Method example** #####
+
+    Method:	GET
+    TotalVUs:	20
+    StartVUs:	4
+    Hold Rampup:	10
+    Duration:	10
+    Ramp up:	1
+    API Name:	ProductAPI
+    Data files:	skuid.csv
+    URL:	grocery-api.stage.grocery-api.prod.walmart.com/v2/api/products/${skuid}
+    Protocol:	HTTPS
+    <b></b>
+    Method:	POST
+    TotalVUs:	50
+    StartVUs:	10
+    Hold Rampup:	10
+    Duration:	30
+    Ramp up:	5
+    API Name:	ShippingAPI
+    URL:	read-service.stg.ship.services.glb.stg.walmart.com/ship-read-service/v1/fulfillment-methods
+    Body:	{ "payload": { "correlationId": "123", "programs": [{ "name": "SHIPPINGPASS", "value": "SUBSCRIBED" }], "offerFulfillmentQueryList": [{ "offerId": "E7110EB3B8A54D6C807514B1D76671CF", "sellerId": "8E3EC82C234B4A5D9D1C2AA8007C2B4E", "sellerType": "EXTERNAL", "rhPath": "7043:7044:9868:7593:5110", "customerShippingAddress": { "zipCode": "35004", "stateCode": "AL", "isPoBox": "N" }, "storeShippingAddressList": [] }, { "offerId": "0000282796E94C319753B01CFBBA32B6", "sellerId": "F55CDC31AB754BB68FE0B39041159D63", "sellerType": "INTERNAL", "rhPath": "7043:7052:10718:10719:7668", "customerShippingAddress": { "zipCode": "85001", "stateCode": "AZ", "isPoBox": "N" }, "storeShippingAddressList": [{ "storeShippingAddress": { "zipCode": "71601", "stateCode": "AR", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "90001", "stateCode": "CA", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "80001", "stateCode": "CO", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "06001", "stateCode": "CT", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "19701", "stateCode": "DE", "isPoBox": "N" }, "storeId": 1001 }] }] } }
+    Protocol:	HTTP
+    Headers:	WM_SVC.VERSION:1.0.0	WM_CONSUMER.IP:127.0.0.1	WM_SVC.ENV:DEV	WM_SEC.AUTH_TOKEN:AHHA	WM_SVC.NAME:ABC	WM_CONSUMER.INTIMESTAMP:1335916114312	Accept:application/json	WM_CONSUMER.ID:2342424	WM_IFX.CLIENT_TYPE:INTERNAL	Content-Type:application/json
+    Wait:	500
+<p/>
+
+##### **Project with 1 Flow with multiple requests and 1 Request** #####
+
+
+    Method:	POST
+    TotalVUs:	20
+    StartVUs:	2
+    Hold Rampup:	1
+    Duration:	30
+    Ramp up:	1
+    API Name:	GOP_CreateAccount
+    Data files:	NewUser.csv
+    URL:	mustang-stg.walmart.com/v3/api/customer?customerFields=all
+    Body:	{"firstName": "test","lastName": "user","emailAddress": "${NewUser}@test.com","password": "test1234","acceptTermsConditions": true,"primaryPhoneNumber": "1234567891","address": {"line1": "450 N Mathilda ave","line2": "M302","city": "sunnyvale","state": "CA","postalCode": "94085","secondaryPhoneNumber": "1234567890","displayLabel": "mn","isDefault": true,"deliveryInstructions": "check"},"storeId": 0,"accessPointId": "baa62b6c-3357-436c-b45f-7c947175fd6d","emailPreference": true}
+    Headers:	Content-Type:application/json
+    
+    Method:	POST
+    API Name:	GOP_AccountClient_AddAddress
+    Data files:	Line1.csv,Line2.csv,City.csv,Postal.csv
+    URL:	mustang-stg.walmart.com/v3/api/customer/address
+    Body:	{"line1": "${Line1}","line2": "${Line2}","city": "${City}","state": "CA","postalCode": "${Postal}","primaryPhoneNumber": "1234567890","displayLabel": "mn","isDefault": true,"deliveryInstructions": ""}
+    Headers:	Content-Type:application/json
+    Method:	POST
+    API Name:	GOP_AccountClient_Updateddress
+    Data files:	Line1.csv,Line2.csv,City.csv,Postal.csv,PhNo.csv
+    URL:	mustang-stg.walmart.com/v3/api/customer/address/245aa99c-9b87-4ed5-80d4-bf7c9d6aa3fe 
+    Body:	{"line1": "${Line1}","line2": "${Line2}","city": "${City}","state": "CA","postalCode": "${Postal}","primaryPhoneNumber": "${PhNo}","displayLabel": "mn","isDefault": true,"deliveryInstructions": ""}
+    Headers:	Content-Type:application/json
+    
+    Method:	POST
+    TotalVUs:	20
+    StartVUs:	4
+    Hold Rampup:	10
+    Duration:	10
+    Ramp up:	1
+    API Name:	ShippingAPI
+    URL:	read-service.stg.ship.services.glb.stg.walmart.com/ship-read-service/v1/fulfillment-methods
+    Body:	{ "payload": { "correlationId": "123", "programs": [{ "name": "SHIPPINGPASS", "value": "SUBSCRIBED" }], "offerFulfillmentQueryList": [{ "offerId": "E7110EB3B8A54D6C807514B1D76671CF", "sellerId": "8E3EC82C234B4A5D9D1C2AA8007C2B4E", "sellerType": "EXTERNAL", "rhPath": "7043:7044:9868:7593:5110", "customerShippingAddress": { "zipCode": "35004", "stateCode": "AL", "isPoBox": "N" }, "storeShippingAddressList": [] }, { "offerId": "0000282796E94C319753B01CFBBA32B6", "sellerId": "F55CDC31AB754BB68FE0B39041159D63", "sellerType": "INTERNAL", "rhPath": "7043:7052:10718:10719:7668", "customerShippingAddress": { "zipCode": "85001", "stateCode": "AZ", "isPoBox": "N" }, "storeShippingAddressList": [{ "storeShippingAddress": { "zipCode": "71601", "stateCode": "AR", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "90001", "stateCode": "CA", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "80001", "stateCode": "CO", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "06001", "stateCode": "CT", "isPoBox": "N" }, "storeId": 1001 }, { "storeShippingAddress": { "zipCode": "19701", "stateCode": "DE", "isPoBox": "N" }, "storeId": 1001 }] }] } }
+    Protocol:	HTTP
+    Headers:	WM_SVC.VERSION:1.0.0	WM_CONSUMER.IP:127.0.0.1	WM_SVC.ENV:DEV	WM_SEC.AUTH_TOKEN:AHHA	WM_SVC.NAME:ABC	WM_CONSUMER.INTIMESTAMP:1335916114312	Accept:application/json	WM_CONSUMER.ID:2342424	WM_IFX.CLIENT_TYPE:INTERNAL	Content-Type:application/json
+    Wait:	500
+<p/>
+
+
+#### **Creating a .json File** ####
+
+
+##### **Sample json** #####
+
+
+<blockquote>
+{
+  "projectName": "EnrichedFav",
+  "request": [{
+      "transactionName": "auth",
+      "rampUp": {
+        "totalVU": 12,
+        "rampupvu": 4,
+        "rampduration": 2,
+        "holdrampup": 10,
+        "duration": 10
+      },
+      "api": [{
+        "name": "GOP_Auth",
+        "method": "POST",
+        "url": "mustang-stg.walmart.com/v3/api/auth",
+        "body": {"password": "test1234", "login": "ow3@test.com"},
+        "headers": {
+          "content-type": "application/json",
+          "testing": "hello"
+        }
+      }, {
+        "name": "GOP_EnrichFav",
+        "method": "GET",
+        "datafiles": [
+          "StoreId.csv",
+          "testing.csv",
+          "hello.csv"
+        ],
+        "url": "https://mustang-stg.walmart.com/v3/api/products?strategy=favorites&storeId=${StoreId}&page=1",
+        "port": 8080,
+        "headers": {
+          "content-type": "application/json"
+        }
+      }]
+    },
+    {
+      "transactionName": "item-client",
+      "rampUp": {
+        "totalVU": 12,
+        "rampupvu": 4,
+        "rampduration": 2,
+        "holdrampup": 10,
+        "duration": 10
+      },
+      "api": [{
+        "name": "Itemclient",
+        "method": "GET",
+        "datafiles": [
+          "itemid.csv"
+        ],
+        "protocol": "HTTP",
+        "wait": 500,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "url": "10.116.137.31/product/${itemid}",
+        "parser": [{
+          "name": "parser1",
+          "regex": "href=\"(.+?)\"",
+          "match": -1
+        }]
+      }]
+    }
+  ]
+}
+
+<p/>
+
+#### **Using an Existing .jmx File** ####
+
+
+<p>Before Dropping your .jmx file on the GIT Repo validate these things</p>
+<ul>
+  <li>
+    <strong>Remove all the Listener you have on the TestPlan</strong> (Note - Disabling the Listeners wont work)</li>
+  <li>If you are using data files make sure on <strong>CSV Data Set Config the Filename field matches with the data file name on GIT</strong>
+    <strong>
+      <br class="_mce_tagged_br"/>
+    </strong>
+  </li>
+</ul>
+<p>
+  <strong>GIT Sample Repo for .jmx - <a href="https://gecgithub01.walmart.com/tchon/collections_esi_perf">collections_esi_perf</a>
+  </strong>
+</p>
+<p>
+  <strong>
+  </strong>
+</p>
+<p>
+  <strong>On JMX these are the fields that  denotes the Ramp up Model</strong>
+</p>
+<p>&lt;stringProp name="ThreadGroup.num_threads"&gt;30&lt;/stringProp&gt; <strong>--- TotalVUs</strong>
+  <br/>&lt;stringProp name="Threads initial delay"&gt;0&lt;/stringProp&gt;<br/>&lt;stringProp name="Start users count"&gt;5&lt;/stringProp&gt; <strong>--- StartVUs</strong>
+  <br/>&lt;stringProp name="Start users count burst"&gt;0&lt;/stringProp&gt;<br/>&lt;stringProp name="Start users period"&gt;300&lt;/stringProp&gt; <strong>--- Hold Rampup</strong>
+  <br/>&lt;stringProp name="Stop users count"&gt;5&lt;/stringProp&gt;<br/>&lt;stringProp name="Stop users period"&gt;1&lt;/stringProp&gt;<br/>&lt;stringProp name="flighttime"&gt;600&lt;/stringProp&gt; <strong>--- Duration</strong>
+  <br/>&lt;stringProp name="rampUp"&gt;1&lt;/stringProp&gt; <strong>--- Ramp up</strong>
+</p>
+<p>
+  <img src="https://confluence.walmart.com/download/attachments/205570584/image2017-10-23%2016%3A51%3A17.png?version=1&modificationDate=1508802677000&api=v2"</>
+</p>
+
+#### **Real Time Monitoring** ####
+
+<p>You can setup to monitor your test in a couple of minutes following these steps</p>
+<ol>
+  <li>Clone the Medusa Template - <a href="https://medusa.walmart.com/dashboard/db/perf_template?refresh=1m&amp;orgId=1">https://medusa.walmart.com/dashboard/db/perf_template?refresh=1m&amp;orgId=1</a>
+  </li>
+  <li>Just change the Dashboard Variable <span style="color: rgb(51,102,255);">project_name to your Project Name</span>
+  </li>
+  <li>
+    <span style="color: rgb(0,0,0);">For Avg Response Time by Usecase, Response Time Min and Max &amp; Status Code Edit the Graph and Select the appropriate Usecase names</span>
+  </li>
+</ol>
+<p>
+</p>
+<p><strong>Medusa:<strong></p>
+<p>
+  <span style="color: rgb(0,0,0);">
+    <img src="https://confluence.walmart.com/download/attachments/187097369/Hyper_RealTime_Monitor.png?version=1&modificationDate=1500360888000&api=v2"</>
+    <br/>
+  </span>
+</p>
+<br/>
+
+#### **HYPER API's** ####
+
+<p>
+  <span style="color: rgb(255,102,0);">
+    <strong>Development Phase</strong>
+  </span>
+</p>
+  <strong>Performance Test Trigger API</strong>
+ <p/>
+
+    GET Request -- http://hyper.walmart.com/api/perf-trigger?projectName=<Project Name>&gitUrl=<Git Repo URL>&emailId=<Email Id>&tenant=<Tenant Name>&hostname=<Host Name>&callback=<Callback End Point>
+
+<p/>
+     tenant – Should not have any spaces or numbers or special characters<p/>
+     hostname – Optional field if not provided it will use the value from .perf
+<p/>
+<br/>
+   <strong>Output:</strong>
+<p/>
+   <strong>Success Response</strong>
+      <p>{"status":"Success","project":"Hyper_Demo","notificationEmail":"<a href="mailto:pkumaar@walmart.com">
+          <span class="s4">pkumaar@walmart.com</span>
+        </a>"}</span>
+    </p>
+ <p/>
+   <p><strong>Failed Responses</strong>
+      </span>
+      
+   <span class="s1">{"status":"Error","error":"Project Name is missing"}</span>
+   <span class="s1">{"status":"Error","error":"GIT URL is missing"}</span>
+   <span class="s1">{"status":"Error","error":"Email ID is missing"}</span>
+   <span class="s1">{"status":"Error","error":"Tenant Name is missing"}</span>
+   <span class="s1">{"status":"Error","message":" Provide proper Git Repo URL, Email ID and Tenant Name "}</span>
+<br/>
+  <strong>Examples:</strong>
+
+<strong>Trigger Test:</strong>
+<a href="http://hyper.walmart.com/api/perf-trigger?projectName=Hyper_Demo&amp;gitUrl=https://gecgithub01.walmart.com/pkumaar/Hyper_Demo.git&amp;emailId=pkumaar@walmart.com&amp;tenant=CP">http://hyper.walmart.com/api/perf-trigger?projectName=Hyper_Demo&amp;gitUrl=https://gecgithub01.walmart.com/pkumaar/Hyper_Demo.git&amp;emailId=pkumaar@walmart.com&amp;tenant=CP
+<strong>Trigger test with dynamic Hostname:</strong>
+<a href="http://hyper.walmart.com/api/perf-trigger?projectName=Hyper_Demo&amp;gitUrl=https://gecgithub01.walmart.com/pkumaar/Hyper_Demo.git&amp;emailId=pkumaar@walmart.com&amp;tenant=CP&amp;hostname=10.116.140.67">http://hyper.walmart.com/api/perf-trigger?projectName=Hyper_Demo&amp;gitUrl=https://gecgithub01.walmart.com/pkumaar/Hyper_Demo.git&amp;emailId=pkumaar@walmart.com&amp;tenant=CP&amp;hostname=10.116.140.67</a>
+     </p>
+<p/>
+<br/>
+  <strong>Test Status Callback API</strong>
+ <p/>
+
+<strong>After test completed Hyper will post back the status to the Callback API</strong>
+<p/>
+
+<strong>GET Request</strong> -- <a href="http://172.16.103.52:50308?status=SUCCESS&amp;project=terra-firma-perf">&lt;Callback Endpoint&gt;?status=&lt;Test Status&gt;&amp;project=&lt;</a>Project Name&gt;</h3>
+    <p class="p1">If the callback failed it will retry 5 times every 15 secs.</p>
+
+ <strong>Output:</strong>
+<p/>
+   <strong>Success Callback</strong>
+ <p><a href="http://172.16.103.52:50308/?status=SUCCESS&amp;project=terra-firma-perf">http://172.16.103.52:50308?status=SUCCESS&amp;project=terra-firma-perf</a> </p></span>
+   
+ <p/>
+   <p><strong>Failed Callback</strong>
+      </span>
+    <p>
+      <a href="http://172.16.103.52:50308?status=FAILED&amp;project=terra-firma-perf">http://172.16.103.52:50308?status=FAILED&amp;project=terra-firma-perf</a>
+    </p>
+
+
