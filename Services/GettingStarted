@@ -2,13 +2,11 @@
 ### **Prerequisites** ###
 <p>
   You need to create a GIT Repository (Public access) with the following files <strong>
-    <a href="https://confluence.walmart.com/display/PRT/3%29+How+to+create+.perf+file">.perf</a> or .jmx (Jmeter Test Plan) and .csv</strong> data files if any</p>
+    <a href="https://confluence.walmart.com/display/PRT/3%29+How+to+create+.perf+file">.perf</a>, perf.json or *.jmx (Jmeter Test Plan) and .csv</strong> data files if any</p>
 <p>Alternately, you could also drop your existing .jmx files <span style="color: rgb(0,0,0);">(Jmeter Test Plan)</span> directly and run the performance test as well without creating .perf file.</p>
 
 
 ### **Step-by-Step Guide** ###
-
-
 
 <p>
 <ol>
@@ -20,7 +18,7 @@
     <p>Create Project</p>
     <ol type="a">
       <li>Create GIT Repo first (sample - <a class="external-link" href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf" rel="nofollow">Hyper_Demo</a>)</li>
-      <li>Create <strong>.perf file </strong>(sample - <a class="external-link" href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf" rel="nofollow">Hyper_Demo</a>
+      <li>Create <strong>.perf file or perf.json file</strong>(sample - <a class="external-link" href="https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf" rel="nofollow">Hyper_Demo</a>
         <span class="repo-root js-repo-root" style="color: rgb(118,118,118);">
           <span> ) <span style="color: rgb(0,0,0);">
               <strong>or dropping the existing .jmx file</strong> (Jmeter Test Plan)</span>
@@ -37,8 +35,6 @@
   </li>
   <img src="https://confluence.walmart.com/download/attachments/209950455/hyper_image2017-5-4%2021_56_2.png?api=v2">
   <br></br>
-  <br></br>
-  <img src="https://confluence.walmart.com/download/attachments/209950455/hyper_image2017-3-14%2013_6_40.png?api=v2">
   <br></br>
   <br></br>
   <li>
@@ -216,6 +212,7 @@
 
 ##### **Project with 2 Requests. Also contains post Method example** #####
 
+
     Method:	GET
     TotalVUs:	20
     StartVUs:	4
@@ -290,6 +287,7 @@
 ##### **Sample json** #####
 
 
+
 <blockquote>
 {
   "projectName": "EnrichedFav",
@@ -362,6 +360,7 @@
 #### **Using an Existing .jmx File** ####
 
 
+
 <p>Before Dropping your .jmx file on the GIT Repo validate these things</p>
 <ul>
   <li>
@@ -416,7 +415,10 @@
 </p>
 <br/>
 
+
 #### **HYPER API's** ####
+
+
 
 <p>
   <span style="color: rgb(255,102,0);">
@@ -480,5 +482,6 @@
     <p>
       <a href="http://172.16.103.52:50308?status=FAILED&amp;project=terra-firma-perf">http://172.16.103.52:50308?status=FAILED&amp;project=terra-firma-perf</a>
     </p>
+<p/>
 
 
