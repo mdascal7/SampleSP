@@ -60,7 +60,7 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
 
 ### **Architecture**
 
-{% include image.html file="209961559.png" alt="" %}
+![](images/209961559.png)
 
 ### **Feature List**
 
