@@ -102,7 +102,7 @@ GIT sample of .perf file - [Hyper_Demo](https://gecgithub01.walmart.com/pkumaar
 
 [Hyper Uses Multi Step Ramp up Model - Sample ](https://gecgithub01.walmart.com/pkumaar/Hyper_Demo/blob/master/.perf)
 
-{% include image.html file="209968427.png" alt="" %}
+![](images/209968427.png)
 
 **Examples:**
 
@@ -476,7 +476,7 @@ You can setup to monitor your test in a couple of minutes following these steps
 
 **Medusa:**
 
-{% include image.html file="197722612.png" alt="" %} 
+![](images/197722612.png) 
 
 #### **HYPER API’s**
 
