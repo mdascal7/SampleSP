@@ -464,7 +464,7 @@ Before Dropping your .jmx file on the GIT Repo validate these things
 <stringProp name=”flighttime”>600</stringProp> **— Duration**   
 <stringProp name=”rampUp”>1</stringProp> **— Ramp up**
 
-{% include image.html file="206979187.png" alt="" %}
+![](images/206979187.png)
 
 #### **Real Time Monitoring**
 
