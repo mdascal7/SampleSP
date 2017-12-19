@@ -454,15 +454,15 @@ Before Dropping your .jmx file on the GIT Repo validate these things
 
 **On JMX these are the fields that denotes the Ramp up Model**
 
-`<stringProp name=”ThreadGroup.num_threads”>30</stringProp> -` **TotalVUs**   
-<stringProp name=”Threads initial delay”>0</stringProp>  
-<stringProp name=”Start users count”>5</stringProp> **— StartVUs**   
-<stringProp name=”Start users count burst”>0</stringProp>  
-<stringProp name=”Start users period”>300</stringProp> **— Hold Rampup**   
-<stringProp name=”Stop users count”>5</stringProp>  
-<stringProp name=”Stop users period”>1</stringProp>  
-<stringProp name=”flighttime”>600</stringProp> **— Duration**   
-`<stringProp name=”rampUp”>1</stringProp> - `**Ramp up**
+`<stringProp name=”ThreadGroup.num_threads”>30</stringProp>` **— TotalVUs**   
+`<stringProp name=”Threads initial delay”>0</stringProp>`  
+`<stringProp name=”Start users count”>5</stringProp>` **— StartVUs**   
+`<stringProp name=”Start users count burst”>0</stringProp>`  
+`<stringProp name=”Start users period”>300</stringProp>` **— Hold Rampup**   
+`<stringProp name=”Stop users count”>5</stringProp>`  
+`<stringProp name=”Stop users period”>1</stringProp>`  
+`<stringProp name=”flighttime”>600</stringProp>` **— Duration**   
+`<stringProp name=”rampUp”>1</stringProp>` **— Ramp up**
 
 ![](images/206979187.png)
 
