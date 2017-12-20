@@ -54,17 +54,17 @@ The developer starts by creating a Repository in GIT, with public access; and ad
 
 The completed .perf file checked into GIT should resemble the following:
 
-    Project Name:	Perf_Auto_Test
-    Method:	GET
-    TotalVUs:	20
-    StartVUs:	4
+    Project Name:	PromotionsCouponGeneratePost
+    Method:	POST
+    TotalVUs:	4
+    StartVUs:	2
     Hold Rampup:	10
     Duration:	10
     Ramp up:	1
-    API Name:	test1
-    Data files:	zipcode.csv,skuid.csv
-    URL:	grocery-api.stage.grocery-api.prod.walmart.com/v2/api/serviceAvailabilitypostalCode=${zipcode}&fulfillmentType=ALL&&&radius=35&testStores=true&
-    Protocol:	HTTPS
+    API Name:	generate
+    URL:	ws.qaint.promotionengine.walmart.com/promotion-app/rs/v2/coupons/generate
+    Body:	{"payload":{"type":"SINGLE_USER","groupCode":"TEST_GROUP","cid":"efb36761-07a4-4bc4-9cbf-d1e347155dc9","source":"CCA","reason":"For goodwill coupon"}}
+    API Name:	WM_CONSUMER.TENANT_ID:0	WM_CONSUMER.VERTICAL_ID:2	Content-Type:application/json	WM_SVC.ENV:dev	WM_SVC.NAMEWM_QOS.CORRELATION_ID:7acd4fa5-1b0e-496f-94a2-18f5fcb47315	WM_CONSUMER.ID:0
 <p/>
 
 
