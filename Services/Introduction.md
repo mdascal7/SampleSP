@@ -29,16 +29,16 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
 
 ### **Use Case**
 
-**New or Existing API**
+**Testing a New or Existing API**
 
-A developer wants to track the performance of an API call, used to generate a promotional coupon as part of GOP - OneWalmart. They are interested in the following performance characteristics:
+A developer wants to track the performance of an API call, a HTTP POST Method Call used to generate a promotional coupon as part of GOP - OneWalmart. They are interested in the following performance characteristics:
 
 *   Response Time
 *   Throughput
 
 **Steps**
 
-The developer starts by creating a Repository in GIT calling it, <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCouponGeneratePost">PromotionsCouponGeneratePost</a> with public access; and add a .perf file with the following entries:
+The developer starts by creating a Repository in GIT calling it, <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCouponGeneratePost">PromotionsCouponGeneratePost</a> with public access; and adds a .perf file with the following entries:
 
 *   Project Name: The project name should be the same name as the name of the Repository created in GIT
 *   Method: Currently the two supported methods are GET and, POST
@@ -67,12 +67,24 @@ The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCoup
     API Name:	WM_CONSUMER.TENANT_ID:0	WM_CONSUMER.VERTICAL_ID:2	Content-Type:application/json	WM_SVC.ENV:dev	WM_SVC.NAMEWM_QOS.CORRELATION_ID:7acd4fa5-1b0e-496f-94a2-18f5fcb47315	WM_CONSUMER.ID:0
 <p/>
 
+*   Add Project: Then, proceeds to add the project to <a href="http://hyper.walmart.com/create">HYPER</a> providing the following information:
 
-**Reports**
+    *   Project Name: This will be the same name as the project name specified in the .perf file in GIT
+    *   GIT Repo URL: This is the GIT Repo HTTPS endpoint URL (do not provide the SSH GIT-link for this)
+    *   Email Id: The email ID for sending the performance report (use comma separated for multiple ID's)
+    
+*   Run Test: Finally, proceeds to run the test on <a href="http://hyper.walmart.com">HYPER</a> providing the following information:
 
-*   Test summary report
-*   Live Performance Test Monitoring using Medusa
-*   Continuous Performance (Pipeline)
+    *   Project Name: This will be the same name as the project name specified in the .perf file in GIT
+    *   GIT Repo URL: This is the GIT Repo HTTPS endpoint URL (do not provide the SSH GIT-link for this)
+    *   Email Id: The email ID for sending the performance report (use comma separated for multiple ID's)
+
+**Report**
+
+*   Once the test is completed, a similar report will be generated and sent to the email provided during test execution
+
+![](images/209961559.png)
+
 
 ### **Architecture**
 
