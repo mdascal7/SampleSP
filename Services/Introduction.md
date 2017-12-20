@@ -92,114 +92,42 @@ The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCoup
 
 ### **Feature List**
 
-**Production Performance test**
+**Phase 1**
 
-*   MVP: Able to run from public cloud - No AWS agents
-*   MVP: Locations for Public cloud agents (US)
-*   Locations for Public cloud agents (UK, Canada)
-*   MVP: Able to handle - 60M PageViews/Hr and 10K OPM at minimum
-*   MVP: Able to control individual scripts’ VUs while test execution
-*   Enable certain percentage to log request and response data in the test tool
+*   Ability to Execute Independently through the UI
+*   One Step Ramp up Model
+*   Both HTTP and HTTPS Protocols Available
+*   HTTP Methods Available Include both GET and, POST
+*   The Ability to Send Header Information as part of the Request
+*   Adding Single Column Data Files in CSV Format
+*   UI Showing Trend Graphs
+*   UI Showing Test Status, whether the Test is Executing or, Queued
+*   Slack Integration for Reporting
+*   Email Integration for Sending Reports
+*   Integration with GIT
+*   Data Files, Workload and Use Case Modification
 
-**Internal Performance Test**
+**Phase 2**
 
-*   MVP: Able to reach ~60K TPS
+*   Multiple Step Ramp up Model
+*   Integration with Medusa
+*   Able to Hit Custom Port with the Request
 
-**Test Manager**
+### **Planned Features**
 
-*   MVP: Should spin up test controllers
-*   Control load based on feedback data (ramp up, down or stop) for complex load tests (multiple components, end-to-end)
-    *   Need to define feedback data for ramping
-*   MVP: Start, stop, abort tests
-*   MVP: Kill switch for individual sub-test or overall tests
-*   Schedule tests
-*   MVP: Gating: detect overlap and limit
-*   Service discovery
-*   MVP: Queueing of tests
-*   MVP: Ability to spin up test infrastructure by OneOps Org
+*   Run All Use Cases Sequentially at the Project Level
+*   Text Validation on the Response
+*   Ability to Use Random Variables
+*   Ability to Use UUID Variable
+*   .perf File Validation
+*   VU's Graph on the UI
+*   Ability to Stop the Test
+*   Adding Wait Time between Requests
+*   Enable Transactional or Workflow Model Flows
+*   Passing Values between Requests
+*   The Ability to Parse Response Data
+*   The Ability to Provide a User Specified Slack Channel
 
-**Test Project and User Portal**
-
-*   MVP: Roles Management (Assign 5 Roles: Super Admin, Admin, Performance Engineer, Read Only, Anonymous)
-*   MVP: Ability to login using HO userid
-*   MVP: View and compare historic results
-*   MVP: Ability to upload test projects (.jmx and .yaml)
-*   MVP: Maintain uploaded tests plans for future reference
-*   MVP: Ability to kickoff tests from GIT repo
-
-**Test Controllers**
-
-*   MVP: Spin up and control the executors dynamically based on defined load and state of the executers (auto-scale)
-*   MVP: Monitor executors, OS level, error counts, etc.
-*   MVP: Controller needs to aggregate test results.
-*   MVP: Kill runaway executors
-
-**Scripting**
-
-*   Recording the flow
-*   MVP: Adding validation on response (HTTP response codes are not sufficient, need to check for internal error codes ann response data)
-*   MVP: Correlate response and parse (complex flows, using response data for subsequent requests, need to be available for body, header and URL)
-*   MVP: Support create random input data for requests for strings and other data type, should be able to utilize external code.
-*   MVP: Multi column CSV file (seed data where one column in row depends on a value from another column)
-*   Script validation
-*   MVP: Ability to suppress images and 3rd party requests (example: no calls to Visa for checkout flows, suppress ads, etc. )
-*   Ability to suppress specific errors or warnings
-*   Multiple ways of error handling
-    *   MVP: Stop on error
-    *   Continue on error
-    *   Retry on error (specify max number of retries, retry from step one of flow)
-*   MVP: Headers (add customer header to request, manipulate header, add, modify or remove stuff from headers)
-*   MVP: Cookies management (e.g. add, remove, change value, delete all or subset of cookies for domain in test browser)
-*   Enable or disable caching option - All request will be like first time visitor
-*   MVP: Disable caching option - All request will be like first time visitor
-*   MVP: Ability to hit specific ports for IPs, host names or VIPs
-*   Profile types and user types (e.g. debug users, enable debug information for subset of test users, flows can also differ between user types. leave out steps, use different path)
-*   MVP: Different type of workload modeling (e.g. dynamic ramp-up and down based on feedback, ability to script not dynamic ramp up and down)
-*   Import and export projects (build new test scripts based on existing scripts)
-*   Debug statements on log files (include additional information to log files for script debugging purposes)
-*   MVP: Session management (test user)
-*   Cross browser and device support (specify browser/ device mix in script, also ability to simulate network speed by device)
-*   MVP: Think and pacing for user actions
-*   Synchronization functions (control how many users execute a particular step at the same time)
-*   Define granularity of real-time result reporting, also applies to reporting in general
-*   MVP: Ability to define custom timers (e.g. single time for multiple steps)
-*   MVP: Auto Test plan generation for single API/service test
-*   Custom functions, i.e. reusable, extensible library of common somewhat high-level functionality
-
-**Real Time Monitoring**
-
-*   MVP: For each Request Response Time count, min, max and Avg per sec
-*   MVP: Hits/sec
-*   MVP: Errors/sec
-*   MVP: HTTP Pages/sec
-
-**Reporting**
-
-*   MVP: Summary Report
-*   MVP: Real-time Time series data
-*   MVP: Page level stats
-*   Graph for all the data related to test
-*   MVP: Error Info (Breakdown by response/code or error code)
-*   Network stats
-*   Integrate with APP and OS metrics
-*   CDN/Torbit data
-*   DB data
-*   MVP: Test infrastructure utilization (scheduled tests, test run status, #tests running, #tests scheduled, #tests finished)
-*   MVP: Test Data persistence
-*   MVP: Ability to compare results between different runs
-*   MVP: Email results
-*   MVP: Integration with Slack
-
-**CI CD/Self-Service/On-Demand**
-
-*   MVP: Gating - Service Dependency
-*   MVP: Throttling – Duration, No of threads, environment
-*   MVP: Mocking for CI/CD and Component Tests
-*   Restrictions – (only non-prod)
-*   Quota and priority (e.g. locks)
-*   DC Level or cloud level selection with localized test executors
-*   MVP: Single-Sign on for On-Demand/Self Service
-*   MVP: Audit Trail
 
 ### **Customers**
 
@@ -208,6 +136,5 @@ The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCoup
 *   Promotions
 *   Sam’s Club
 *   USGM
-*   Walmart Core
 
     **(Over 150 Projects Ported!)**
