@@ -38,7 +38,7 @@ A developer wants to track the performance of an API call, used to generate a pr
 
 **Steps**
 
-The developer starts by creating a Repository in GIT, with public access; and add a .perf file with the following entries:
+The developer starts by creating a Repository in GIT calling it, <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCouponGeneratePost">PromotionsCouponGeneratePost</a> with public access; and add a .perf file with the following entries:
 
 *   Project Name: The project name should be the same name as the name of the Repository created in GIT
 *   Method: Currently the two supported methods are GET and, POST
@@ -52,7 +52,7 @@ The developer starts by creating a Repository in GIT, with public access; and ad
 *   Body: The body of the request (applicable for the, POST Method)
 *   Headers: The Request Headers (for passing multiple headers, use tab as separator. Note, all header values must be on a single line)
 
-The completed .perf file checked into GIT should resemble the following:
+The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCouponGeneratePost/blob/master/.perf">.perf</a> file checked into GIT should resemble the following:
 
     Project Name:	PromotionsCouponGeneratePost
     Method:	POST
