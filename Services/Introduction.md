@@ -27,30 +27,46 @@ HYPER is a homegrown Performance Testing Tool, build entirely from open source c
 *   Ability to monitor your test in Real Time, while the test is executing
 *   All Infrastructure in on _OneOps_ and it is easily scalable
 
-### **Use Cases**
+### **Use Case**
 
-**CI/CD/CP**
+**New or Existing API**
 
-*   New Service
-*   Existing Service - New API
-*   Existing Service - Existing API
-*   Orchestration Layer
-*   Orchestration Layer with New Services
-*   Page Level
-*   Page Groups
-*   Data Variation for all the above Use cases
-*   Services with Dependency among multiple APIs
+A developer wants to track the performance of an API call, used to generate a promotional coupon as part of GOP - OneWalmart. They are interested in the following performance characteristics:
 
-**Scheduled and On Demand - (Includes CI/CD/CP use cases)**
+*   Response Time
+*   Throughput
 
-*   E2E Testing (lower environments)
-*   Scalability Testing
-*   Throughput Testing
-*   Benchmarking Testing   
+**Steps**
 
-    *   Hardware
-    *   Software
-*   Spike Testing
+The developer starts by creating a Repository in GIT, with public access; and add a .perf file with the following entries:
+
+*   Project Name: The project name should be the same name as the name of the Repository created in GIT
+*   Method: Currently the two supported methods are GET and, POST
+*   TotalVUs: The number of users to execute in parallel for this Use Case
+*   StartVUs: The number of users to start-with and continue until the number of TotalVUs' is reached
+*   Hold Rampup: How long, in minutes, the starting users will run before ramping up (the maximum is, 1 hour)
+*   Duration: How long, in minutes, to continue running after the maximum number of users is reached (the maximum is, 1 hour)
+*   Ramp up: How long, in seconds, to ramp-up the next set of StartVUs
+*   API Name: The name of the testable API
+*   URL: The end-point URL for the testable API (without including http:// or, https://)
+*   Body: The body of the request (applicable for the, POST Method)
+*   Headers: The Request Headers (for passing multiple headers, use tab as separator. Note, all header values must be on a single line)
+
+The completed .perf file checked into GIT should resemble the following:
+
+    Project Name:	Perf_Auto_Test
+    Method:	GET
+    TotalVUs:	20
+    StartVUs:	4
+    Hold Rampup:	10
+    Duration:	10
+    Ramp up:	1
+    API Name:	test1
+    Data files:	zipcode.csv,skuid.csv
+    URL:	grocery-api.stage.grocery-api.prod.walmart.com/v2/api/serviceAvailabilitypostalCode=${zipcode}&fulfillmentType=ALL&&&radius=35&testStores=true&
+    Protocol:	HTTPS
+<p/>
+
 
 **Reports**
 
