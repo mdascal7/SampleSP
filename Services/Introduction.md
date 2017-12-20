@@ -83,7 +83,7 @@ The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCoup
 
 *   Once the test is completed, a similar report will be generated and sent to the email provided during test execution
 
-![](images/2099668428.png)
+![](images/209968428.png)
 
 
 ### **Architecture**
