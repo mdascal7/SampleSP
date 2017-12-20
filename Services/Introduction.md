@@ -67,7 +67,7 @@ The completed <a href="https://gecgithub01.walmart.com/CE-PERFREL/PromotionsCoup
     API Name:	WM_CONSUMER.TENANT_ID:0	WM_CONSUMER.VERTICAL_ID:2	Content-Type:application/json	WM_SVC.ENV:dev	WM_SVC.NAMEWM_QOS.CORRELATION_ID:7acd4fa5-1b0e-496f-94a2-18f5fcb47315	WM_CONSUMER.ID:0
 <p/>
 
-*   Add Project: Then, proceeds to add the project to <a href="http://hyper.walmart.com/create">HYPER</a> providing the following information:
+*   Add Project: Then, proceeds to <a href="http://hyper.walmart.com/create">add the project</a> to HYPER by providing the following information:
 
     *   Project Name: This will be the same name as the project name specified in the .perf file in GIT
     *   GIT Repo URL: This is the GIT Repo HTTPS endpoint URL (do not provide the SSH GIT-link for this)
